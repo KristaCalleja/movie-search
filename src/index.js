@@ -16,7 +16,7 @@ const fetchMovies = (query) => {
     .then(insertMovies);
 };
 
-fetchMovies('harry potter'); // on 1st page load
+fetchMovies('lost'); // on 1st page load
 
 const form = document.querySelector('#search-form');
 form.addEventListener('submit', (event) => {
