@@ -1,12 +1,7 @@
-import { fetchMovies } from './movies';
+import { fetchMovies, updateResultsList } from './movies';
 
-fetchMovies('lost'); // on 1st page load
+fetchMovies('lost'); // Default load
 
 const form = document.querySelector('#search-form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  list.innerHTML = '';
-  const input = document.querySelector('#search-input');
-  fetchMovies(input.value);
-});
+form.addEventListener('submit', updateResultsList);
 

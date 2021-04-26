@@ -16,4 +16,10 @@ const fetchMovies = (query) => {
       .then(insertMovies);
 };
 
-export { fetchMovies };
+const updateResultsList = (event) => {
+    event.preventDefault();
+    list.innerHTML = '';
+    const input = document.querySelector('#search-input');
+    fetchMovies(input.value);
+}
+export { fetchMovies, updateResultsList };
